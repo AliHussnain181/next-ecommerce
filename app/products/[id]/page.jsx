@@ -12,6 +12,7 @@ export default function Page({ params }) {
   useEffect(() => {
     fetchProduct();
   }, [id]);
+  
 
   const fetchProduct = async () => {
     try {

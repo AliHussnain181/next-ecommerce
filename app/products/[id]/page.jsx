@@ -10,8 +10,8 @@ export default function Page({ params }) {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetchProduct();
-  }, [id]);
+    fetchProduct(id, setData);
+  }, [id, setData]);
   
 
   const fetchProduct = async () => {

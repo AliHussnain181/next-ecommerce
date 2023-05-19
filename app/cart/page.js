@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { TiPlus, TiMinus } from 'react-icons/ti';
 import { AiFillDelete } from 'react-icons/ai';
+import Image from 'next/image';
 
 const CartComponent = () => {
   const [cartItems, setCartItems] = useState([]);
@@ -46,10 +47,12 @@ const CartComponent = () => {
                 key={item.id}
               >
                 <div className="flex items-center">
-                  <img
-                    className="w-16 h-16 rounded-lg"
+                  <Image
+                    className="w-20 h-20 rounded-lg"
                     src={item.image}
                     alt="Product Image"
+                    width={100}
+                    height={100}
                   />
                   <div className="ml-4">
                     <h3 className="font-semibold">{item.name}</h3>

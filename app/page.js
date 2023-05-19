@@ -1,4 +1,5 @@
 "use client"
+import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
@@ -26,9 +27,11 @@ export default function ProductList() {
         {products.map((product) => (
           <Link href={`/products/${product.id}`}>
           <div key={product.id} className="bg-white rounded shadow p-4">
-            <img
+            <Image
               src={product.image}
               alt={product.title}
+              width={150}
+              height={150}
               className="w-full h-40 object-cover mb-2"
             />
             <h2 className="text-lg font-semibold mb-2 line-clamp-1">{product.title}</h2>
